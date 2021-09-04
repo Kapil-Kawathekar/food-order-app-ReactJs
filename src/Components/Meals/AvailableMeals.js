@@ -1,6 +1,7 @@
 import Card from "../UI/Card";
 import classes from "./AvailableMeals.module.css";
 import MealItem from "./MealsItem/MealItem";
+
 const DUMMY_MEALS = [
   {
     id: "m1",
@@ -30,6 +31,7 @@ const DUMMY_MEALS = [
 export default function AvailableMeals() {
   const mealsList = DUMMY_MEALS.map((meal) => (
     <MealItem
+      id={meal.id}
       name={meal.name}
       price={meal.price}
       description={meal.description}
